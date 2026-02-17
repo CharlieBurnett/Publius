@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: 3px solid #ffffff;
+    padding: 0.5rem 1.5rem;
+}
+
+.tagline {
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 1rem;
+    margin-top: 6rem;
+}
+
+.signup-form input[type="email"] {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    width: 22rem;
+    text-align: center;
+    outline: none;
+}
+
+.signup-form input[type="email"]::placeholder {
+    color: #666666;
+    font-style: italic;
+}
+
+.signup-form input[type="email"]:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 1px #ffffff;
+}
+
+.signup-form button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1rem;
+    padding: 0.75rem 2.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.signup-form button:hover {
+    background-color: #cccccc;
+}
