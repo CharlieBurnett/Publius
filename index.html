@@ -26,12 +26,19 @@
         </form>
     </div>
     <script>
-        document.querySelector('.signup-form').addEventListener('submit', function(e) {
+        var form = document.querySelector('.signup-form');
+        var button = form.querySelector('button');
+        var input = form.querySelector('input[type="email"]');
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
-            var email = document.querySelector('input[type="email"]').value;
-            gtag('event', 'notify_signup', {
-                email_text: email
-            });
+            gtag('event', 'notify_signup');
+            button.textContent = 'Done';
+            input.value = '';
+        });
+        input.addEventListener('input', function() {
+            if (button.textContent === 'Done') {
+                button.textContent = 'Notify Me';
+            }
         });
     </script>
 </body>
